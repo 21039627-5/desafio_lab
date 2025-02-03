@@ -30,45 +30,7 @@ Esta é uma API para processamento de pedidos, permitindo o upload de arquivos `
 
 ## Estrutura do Projeto
 
-LUIZALABS/
-│
-├── processed/                 # Pasta onde o banco de dados SQLite é armazenado
-│   ├── orders.db              # Arquivo do banco de dados SQLite
-│
-├── src/                       # Diretório principal do código fonte
-│   ├── api/                   # Diretório que contém a API
-│   │   ├── controllers/       # Controladores da API
-│   │   │   ├── api\_controller.py # Controlador da API
-│   │   │   └── **init**.py    # Inicializador do pacote
-│   │   ├── app.py             # Código principal da aplicação Flask
-│   │   └── settings.py        # Configurações da aplicação
-│   │
-│   ├── config/                # Configurações da aplicação
-│   │   ├── **init**.py        # Inicializador do pacote de configurações
-│   │\
-│   │
-│   ├── services/              # Serviços da aplicação
-│   │   ├── file\_processor.py  # Código para processar arquivos
-│   │   └── **init**.py        # Inicializador do pacote de serviços
-│   │
-│   ├── tests/                 # Diretório de testes
-│   │   ├── test\_api.py        # Testes para os endpoints da API
-│   │   ├── test\_file\_processor.py # Testes para o processamento de arquivos
-│   │   ├── data\_1.txt         # Arquivo de teste com dados formatados
-│   │   └── invalid\_file.jpg   # Arquivo de teste inválido
-│   │
-│   ├── utils/                 # Utilitários da aplicação
-│   │   ├── **init**.py        # Inicializador do pacote de utilitários
-│   │   ├── database.py        # Funções de conexão com o banco de dados
-│   │   └── logger.py          # Configurações de logging
-│
-├── uploads/                   # Diretório para uploads de arquivos
-│
-├── venv/                      # Diretório do ambiente virtual
-│
-├── .gitignore                 # Arquivo para ignorar arquivos no Git
-├── app.log                    # Arquivo de log da aplicação
-└── flask\_monitoringdashboard.db # Arquivo do banco de dados para monitoramento
+![Exemplo de Estrutura ](./src/imagens/estrutura_projeto.png)
 
 
 ## Instalação de Ferramentas
@@ -150,6 +112,9 @@ curl --location 'http://localhost:5000/upload' \
 ```bash
 curl --location 'http://localhost:5000/orders'
 ```
+
+
+### Consultar Datas
 
 ```bash
 curl --location 'http://localhost:5000/orders?order_id=<id_do_pedido>'
